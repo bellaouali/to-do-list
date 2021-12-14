@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.main-container{
+    font-family: poppins;
+    height: 100%;
+    .content {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    p {
+        margin: 0 !important;
+    }
+}
+
+// titles style
+.title-container {
+    padding: $globalPadding;
+    margin: $titleMargin !important;
+
+    .title{
+        font-size: $font20;
+        font-weight: $fontBold;
+        color: $blackColor;
+        position: relative;
+        width: fit-content;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 7px;
+            border-radius: 20px;
+            background: $linearGradient;
+            bottom: -7px;
+
+        }
+    }
+
+    .project-actions {
+        button {
+            @extend .transparent-button;
+            margin: 0 10px;
+        }
+    }
+}
+
+// breadcrumb
+
+.breadcrumb-container {
+    padding: $globalPadding;
+    margin-top: $breadcrumbMargin;
+
+    .breadcrumb {
+        font-size: $font14;
+        font-weight: $fontBold;
+        padding: 5px;
+        background-color: $linkColor;
+        width: fit-content;
+        color: white;
+        cursor: pointer;
+
+        span {
+            &:last-child {
+                font-weight: $fontSemiBold;
+                cursor: default;
+            }
+        }
+    }
+}
+
+// search bar 
+
+.searchbar-container {
+    padding: $globalPadding;
+    margin: $searchBarMargin !important;
+
+    .searchbar {
+        padding: 8px;
+        background-color: $primaryColor;
+        width: fit-content;
+        border: solid .5px $disabledColor;
+        border-radius: 8px;
+        
+        input {
+            width: 317px;
+            background: transparent;
+            border: none;
+            outline: none;
+
+            &::placeholder {
+                font-size: $font14;
+                font-weight: $fontRegular;
+            }
+        }
+        button {
+            @extend .transparent-button;
+        }
+    }
+    
+}

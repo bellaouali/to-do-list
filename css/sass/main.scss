@@ -1,0 +1,304 @@
+@import "./variables";
+@import "./extend";
+@import "./globalrules";
+
+// Header style
+.header {
+    width: 100vw;
+    height: 65px;
+    background-color: $headerColor;
+    border-bottom: solid #707070 1px;
+    box-shadow: $headerShadow;
+
+    .h-content {
+        padding: $globalPadding;
+
+        // logo section
+        .logo {
+            width: 129px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            p {
+                color: $blackColor;
+                font-size: $font25;
+                font-weight: $fontBold;
+                height: fit-content;            
+            }
+        }
+
+        // menu section
+
+        .menu {
+            width: 362px;
+
+            a {
+                text-decoration: none;
+                color: $blackColor;
+                font-size: $font16;
+                font-weight: $fontSemiBold;
+                
+                &:hover{
+                    color: $linkColor;
+                }
+                
+            }
+        }
+    }
+}
+
+// Last day tasks style
+.last-day {
+    padding: $globalPadding;
+    overflow: auto;
+    gap: 30px;
+    height: 180px;
+
+    .last-day-task {
+        width: 206px;
+        height: 152px;
+        @extend .card-style;
+        background-color: $primaryColor;
+        padding: 17px 11px;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: $CardShadowDark;
+        }
+
+        .last-day-task-p {
+            font-size: $font14;
+            font-weight: $fontMedium;
+        }
+
+        p {
+            font-size: $font12;
+            font-weight: $fontRegular;
+        }
+
+        .project-tag {
+            @extend .tag;
+            background-color: $infoColor;
+        }
+        .deadline-tag {
+            @extend .tag;
+            background-color: $warningColor;
+        }
+    }
+}
+
+// recent projects style
+.recent-projects {
+    padding: $globalPadding;
+
+    @extend .parent-table;
+}
+
+// all projects style
+.all-projects {
+    @extend .recent-projects;
+}
+
+// kanban board
+
+.kanban {
+    $kanbanClass : &;
+    padding: $globalPadding;
+    height: calc(100% - 230px);
+
+    #{$kanbanClass}_board {
+        width: 100%;
+        max-width: 380px;
+        height: 100%;
+        padding: 11px;
+        background-color: $primaryColor;
+        @extend .card-style;
+        overflow: hidden;
+
+        #{$kanbanClass}_status {
+            p {
+                font-size: $font16;
+                font-weight: $fontSemiBold;
+                color: $disabledColor;
+            }
+            button {
+                @extend .transparent-button;
+            }
+        }
+
+        #{$kanbanClass}_tasks {
+            height: calc(100% - 50px);
+            overflow: auto;
+            gap: 30px;
+            scrollbar-width: 0px;
+            padding: 30px 3px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            
+            #{$kanbanClass}_task_prio_tag {
+                height: 2px;
+                top: -5px;
+                left: 8px;
+                z-index: 0;
+                border-radius: 4px 4px 0px 0px;
+                background-color: $ImportantColor;
+                color: white;
+                font-size: $font12;
+                font-weight: $fontMedium;
+                padding: 5px 3px;
+                transition: .35s ease-in-out;
+            }
+
+            #{$kanbanClass}_task {
+                z-index: 2;
+                
+                &:hover +  #{$kanbanClass}_task_prio_tag {
+                     top: -24px;
+                     height: 24px;
+                }
+                
+                @extend .card-style;
+                background-color: white;
+                padding: $taskPadding;
+
+                #{$kanbanClass}_uis {
+                    width: $kanbanUIsSize;
+                    height: $kanbanUIsSize;
+
+                    #{$kanbanClass}_task_arrow_pad {
+                        height: 26px;
+                        width: 38px;
+                        background-color: $primaryColor !important;
+                        box-shadow: $CardShadow;
+                        border-radius: 4px;
+
+                        button {
+                            @extend .transparent-button;
+                            
+                            &:first-child {
+                                transform: rotate(270deg);
+                            }
+                            &:last-child {
+                                transform: rotate(90deg);
+                            }
+                        }
+
+                    }
+
+                    #{$kanbanClass}_task_more {
+                        height: 26px;
+                        width: 26px;
+                        background-color: $primaryColor !important;
+                        box-shadow: $CardShadow;
+                        border-radius: 4px;
+                        button {
+                            @extend .transparent-button;
+                        }
+                    }
+                    
+                }
+
+                #{$kanbanClass}_infos {
+                    width: calc(100% - #{$kanbanUIsSize} - 7px);
+
+                    #{$kanbanClass}_task_title {
+                        font-size: $font14;
+                        font-weight: $fontSemiBold;
+                    }
+
+                    #{$kanbanClass}_task_desc {
+                        margin-top: 16px !important;
+                        font-size: $font14;
+                        font-weight: $fontRegular;
+                    }
+
+                    p {
+                        &:nth-child(4n + 3) {
+                            @extend #{$kanbanClass}_task_desc;
+                        }
+                    }
+
+                    .deadline-tag {
+                        @extend .tag;
+                        background-color: $warningColor;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+// popups
+
+.popup {
+    $popupClass : &;
+    position: absolute;
+    background-color: $popUpBackColor;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 30;
+
+    .title-container {
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    #{$popupClass}_main {
+        display: none;
+        width: 553px;
+        border-radius: 8px;
+        background-color: white;
+        padding: 38px 55px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+
+        #{$popupClass}_form {
+            @extend .popup-form;
+        }
+        #{$popupClass}_alert {
+            
+            p {
+                font-size: $font12;
+                font-weight: $fontSemiBold;
+            }
+
+            .alert_buttons {
+                button {
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 8px;
+                    outline: none;
+                    padding: 5px 15px;
+                    font-size: $font12;
+                    font-weight: $fontSemiBold;
+                        
+                    &:first-child {
+                        background-color: $warningColor;
+                        color: white;
+                        &:hover {
+                            background-color: $warningActiveColor;
+                        }
+                    }
+                    &:last-child {
+                        &:hover {
+                            background-color: $CancelActiveColor;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}

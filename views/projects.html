@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Orga</title>
+</head>
+<body>
+    <!-- CONTAINER -->
+    <div class="main-container">
+        <!-- FULL HEADER -->
+        <div class="header d-flex align-items-center">
+            <!-- HEADER CONTENT -->
+            <nav class="h-content content d-flex justify-content-between align-items-center">
+                <!-- LOGO PART -->
+                <div class="logo d-flex justify-content-between align-items-center">
+                    <img src="../assets/icons/OrgaLogo.svg" alt="logo">
+                    <p>ORGA</p>
+                </div>
+                <!-- MENU PART -->
+                <div class="menu d-flex justify-content-between">
+                    <a href="./index.html">Home</a>
+                    <a href="#">Projects</a>
+                    <a href="#">About us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <!-- LIGHT/DARK MODE PART -->
+                <img src="../assets/icons/sun-svgrepo-com.svg" alt="dark-light-mode" class="dl-mode">
+            </nav>
+        </div>
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb-container content">
+            <div class="breadcrumb">
+                Home <span>&nbsp;/ projects</span>
+            </div>
+        </div>
+        <!-- TITLE CONTAINER -->
+        <div class="title-container content">
+            <p class="title">
+                Projects
+            </p>
+        </div>
+        <!-- SEARCH BAR -->
+        <div class="searchbar-container content">
+            <div class="searchbar">
+                <input type="text" placeholder="Search a project">
+                <button>
+                    <img src="../assets/icons/search.svg" alt="search">
+                </button>
+            </div>
+        </div>
+        <!-- ALL PROJECTS TABLE -->
+        <div class="recent-projects content ">
+            <table id="projects-table">
+                <!-- TABLE HEADER -->
+                <tr>
+                    <th>Name</th>
+                    <th>Created at</th>
+                    <th>Finished tasks</th>
+                    <th>Total tasks</th>
+                    <th>Deadline</th>
+                    <th>More</th>
+                </tr>
+                
+                <tr>
+                    <td id="Add-project"><img src="../assets/icons/add-svgrepo-com.svg" alt="all projects" width="17" height="18" class="mr-2">Add a project</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ADD PROJECT POPUP -->
+        <div class="popup d-none">
+            <div class="popup_main" id="add-project-pop">
+                <!-- TITLE CONTAINER -->
+                <div class="title-container content">
+                    <p class="title">
+                        Add a project
+                    </p>
+                </div>
+                <!-- FORM CONTAINER -->
+                <div class="popup_form d-flex flex-column justify-content-between">
+                    <label for="p-name">Project name :</label>
+                    <input type="text" class="project_name" id="p-name" placeholder="Enter project name">
+                    <label for="p-date">Deadline :</label>
+                    <input type="date" class="project_due_date" id="p-date">
+                    <button type="submit" class="btn_add_project" id="btn-add-p" value="add project">add project</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- SCRIPTS -->
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

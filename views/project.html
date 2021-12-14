@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Orga</title>
+</head>
+<body>
+    <!-- CONTAINER -->
+    <div class="main-container">
+
+        <!-- FULL HEADER -->
+        <div class="header d-flex align-items-center">
+            <!-- HEADER CONTENT -->
+            <nav class="h-content content d-flex justify-content-between align-items-center">
+                <!-- LOGO PART -->
+                <div class="logo d-flex justify-content-between align-items-center">
+                    <img src="../assets/icons/OrgaLogo.svg" alt="logo">
+                    <p>ORGA</p>
+                </div>
+                <!-- MENU PART -->
+                <div class="menu d-flex justify-content-between">
+                    <a href="./index.html">Home</a>
+                    <a href="./projects.html">Projects</a>
+                    <a href="#">About us</a>
+                    <a href="#">Contact</a>
+
+                </div>
+                <!-- LIGHT/DARK MODE PART -->
+                <img src="../assets/icons/sun-svgrepo-com.svg" alt="dark-light-mode" class="dl-mode">
+            </nav>
+        </div>
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb-container content">
+            <div class="breadcrumb" >
+                Home / Projects <span id="project-breadcrump"></span>
+            </div>
+        </div>
+        <!-- TITLE CONTAINER -->
+        <div class="title-container content d-flex justify-content-between">
+            <p class="title" id="project-title">
+                Calculator
+            </p>
+            <div class="project-actions">
+                <button id="delete-project">
+                    <img src="../assets/icons/download-svgrepo-com.svg" alt="delete">
+                </button>
+                <button id="edit-project">
+                    <img src="../assets/icons/edit-svgrepo-com.svg" alt="edit">
+                </button>
+            </div>
+        </div>
+        <!-- KANBAN BOARD -->
+        <div class="kanban content d-flex justify-content-between">
+            <div class="kanban_board">
+                <!-- KANBAN STATUS PART -->
+                <div class="kanban_status d-flex justify-content-between">
+                    <p>To do</p>
+                    <button>
+                        <img src="../assets/icons/more.svg" alt="more" width="26" height="8">
+                    </button>
+                </div>
+                <!-- KANBAN TASKS CONTAINER -->
+                <div class="kanban_tasks d-flex flex-column">
+
+                    <div class="kanban_task_container position-relative">
+                        
+                        <div class="kanban_task d-flex justify-content-between position-relative">
+                        
+                            <div class="kanban_infos">
+                                <p class="kanban_task_title">
+                                    Create Project files and structure
+                                </p>
+                                <p class="kanban_task_desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatum quaerat rerum ratione voluptate qui optio ea eaque ab repellendus commodi, fugit expedita sequi quasi nemo aliquam? Labore, sint. Veritatis.
+                                </p>
+                                <p>
+                                    Deadline
+                                </p>
+                                <div class="deadline-tag">
+                                    Today
+                                </div>
+                            </div>
+                            <div class="kanban_uis d-flex justify-content-between">
+                                <!-- STATUS BUTTONS -->
+                                <div class="kanban_task_arrow_pad d-flex justify-content-between">
+                                    <button>
+                                        <img src="../assets/icons/arrow.svg" alt="more" width="12" height="7">
+                                    </button>
+                                    <button>
+                                        <img src="../assets/icons/arrow.svg" alt="more" width="12" height="7">
+                                    </button>
+                                </div>
+                                <div class="kanban_task_more d-flex justify-content-center">
+                                    <button>
+                                        <img src="../assets/icons/more.svg" alt="more" width="16" height="4">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kanban_task_prio_tag position-absolute">
+                            Important
+                        </div>
+
+                    </div>
+                    
+                    <div class="kanban_task_container position-relative">
+                        <div class="kanban_task d-flex justify-content-between position-relative">
+                        
+                            <div class="kanban_infos">
+                                <p class="kanban_task_title">
+                                    Create Project files and structure
+                                </p>
+                                <p class="kanban_task_desc">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatum quaerat rerum ratione voluptate qui optio ea eaque ab repellendus commodi, fugit expedita sequi quasi nemo aliquam? Labore, sint. Veritatis.
+                                </p>
+                                <p>
+                                    Deadline
+                                </p>
+                                <div class="deadline-tag">
+                                    Today
+                                </div>
+                            </div>
+                            <div class="kanban_uis d-flex justify-content-between">
+                                <!-- STATUS BUTTONS -->
+                                <div class="kanban_task_arrow_pad d-flex justify-content-between">
+                                    <button>
+                                        <img src="../assets/icons/arrow.svg" alt="more" width="12" height="7">
+                                    </button>
+                                    <button>
+                                        <img src="../assets/icons/arrow.svg" alt="more" width="12" height="7">
+                                    </button>
+                                </div>
+                                <div class="kanban_task_more d-flex justify-content-center">
+                                    <button>
+                                        <img src="../assets/icons/more.svg" alt="more" width="16" height="4">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kanban_task_prio_tag position-absolute">
+                            Important
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="kanban_board">
+                <div class="kanban_status d-flex justify-content-between">
+                    <p>Doing</p>
+                    <button>
+                        <img src="../assets/icons/more.svg" alt="more" width="26" height="8">
+                    </button>
+                </div>
+            </div>
+            <div class="kanban_board">
+                <div class="kanban_status d-flex justify-content-between">
+                    <p>Done</p>
+                    <button>
+                        <img src="../assets/icons/more.svg" alt="more" width="26" height="8">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDIT AND REMOVE PROJECT POPUP -->
+        <div class="popup d-none">
+            <!-- EDIT POPUP -->
+            <div class="popup_main" id="edit-project-pop">
+                <!-- TITLE CONTAINER -->
+                <div class="title-container content">
+                    <p class="title">
+                        Edit project
+                    </p>
+                </div>
+                <!-- FORM CONTAINER -->
+                <div class="popup_form d-flex flex-column justify-content-between">
+                    <label for="p-edit-name">Project name :</label>
+                    <input type="text" class="project_name" id="p-edit-name" placeholder="Enter project name">
+                    <label for="p-edit-date">Deadline :</label>
+                    <input type="date" class="project_due_date" id="p-edit-date">
+                    <button type="submit" class="btn_add_project" id="btn-edit-p" value="add project">Edit project</button>
+                </div>
+            </div>
+            <!-- DELETE POPUP -->
+            <div class="popup_main" id="delete-project-pop">
+                <!-- TITLE CONTAINER -->
+                <div class="title-container content">
+                    <p class="title">
+                        Delete the project
+                    </p>
+                </div>
+                <!-- ALERT CONTAINER -->
+                <div class="popup_alert">
+                    <p>Are you sure you want to delete this project ?</p>
+                    <div class="alert_buttons mt-3">
+                        <button id="popup-btn-delete">Delete</button>
+                        <button id="popup-btn-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- SCRIPTS -->
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

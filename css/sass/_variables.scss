@@ -1,0 +1,44 @@
+// Color variables
+$primaryColor : #FAFAFA;
+$linearGradient : linear-gradient(270deg, #8991F6, #FF006F, #EFCF2E), no-repeat ;
+$linkColor : #FF006F;
+$linkActiveColor : #e60063;
+$headerColor : #F9F9F9;
+$warningColor : #FF5757;
+$warningActiveColor : #ff2020;
+$infoColor : #8991F6;
+$infoColorDark : #636dfd;
+$blackColor : #393939;
+$disabledColor : #888888;
+$CancelActiveColor : #c4c4c4;
+$enabledColor : #4D4D4D;
+$popUpBackColor : #cecece71;
+$ImportantColor : #00C319;
+
+// Fonts variables
+$font12 : 12px;
+$font14 : 14px;
+$font16 : 16px;
+$font20 : 20px;
+$font25 : 25px;
+
+$fontRegular: 400;
+$fontMedium : 500;
+$fontSemiBold : 600;
+$fontBold : 700;
+
+// Box shadows
+$headerShadow : 0px 8px 8px 0px rgba(0, 0, 0, 0.13);
+$CardShadow : 1px 1px 7px 0px rgba(0, 0, 0, 0.158);
+$CardShadowDark : 1px 1px 7px 0px rgba(0, 0, 0, 0.281);
+
+// Paddings and Margins
+$globalPadding : 0 39px;
+$taskPadding : 10px 20px;
+$titleMargin: 30px auto;
+$breadcrumbMargin: 20px !important;
+$searchBarMargin: 20px auto;
+
+// sizes
+
+$kanbanUIsSize : 70px ; 
